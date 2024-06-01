@@ -1,5 +1,29 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-koofr-go-koofrclient (0.0~git20190724.8e5366d-2) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Update standards version to 4.5.0, no changes needed.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 29 Nov 2022 19:10:48 +0000
+
+golang-github-koofr-go-koofrclient (0.0~git20190724.8e5366d-1) unstable; urgency=medium
+
+  * New upstream version in git
+  * Standards-Version: 4.4.1
+
+ -- Drew Parsons <dparsons@debian.org>  Sat, 11 Jan 2020 01:20:32 +0800
+
+golang-github-koofr-go-koofrclient (0.0~git20190715.2c5813f-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Standards-Version: 4.4.0
+
+ -- Drew Parsons <dparsons@debian.org>  Sun, 21 Jul 2019 17:00:17 +0800
+
+golang-github-koofr-go-koofrclient (0.0~git20190131.7f32759-1) unstable; urgency=medium
+
+  * Initial release (Closes: #928419)
+  * Testing go-koofrclient (koofrlib_suite_test.go) requires a Koofr
+    account. The package can therefore not be tested by Debian.
+
+ -- Drew Parsons <dparsons@debian.org>  Sun, 05 May 2019 17:32:06 +0800

@@ -1,4 +1,8 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang
+
+override_dh_auto_test:
+	@echo "Testing go-koofrclient with koofrlib_suite_test.go requires a Koofr account"
+	@echo "go-koofrclient can therefore not be tested at build time"

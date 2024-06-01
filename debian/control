@@ -1,15 +1,31 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-koofr-go-koofrclient
+Section: devel
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Drew Parsons <dparsons@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               dh-golang,
+               golang-any,
+               golang-ginkgo-dev,
+               golang-gomega-dev,
+               golang-github-koofr-go-httpclient-dev
+Standards-Version: 4.5.0
+Homepage: https://github.com/koofr/go-koofrclient
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-koofr-go-koofrclient
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-koofr-go-koofrclient.git
+XS-Go-Import-Path: github.com/koofr/go-koofrclient
+Testsuite: autopkgtest-pkg-go
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-koofr-go-koofrclient-dev
+Architecture: all
+Depends: ${misc:Depends},
+         golang-ginkgo-dev,
+         golang-gomega-dev,
+         golang-github-koofr-go-httpclient-dev
+Description: Go Koofr client
+ Koofr client for the Go language.
+ .
+ GoDoc (https://godoc.org/github.com/koofr/go-koofrclient)
+ Installgo get github.com/koofr/go-koofrclient Testinggo get -t
+ KOOFR_APIBASE="https://app.koofr.net" KOOFR_EMAIL="email@example.com"
+ KOOFR_PASSWORD="yourpassword" go test
